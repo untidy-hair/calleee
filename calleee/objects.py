@@ -4,8 +4,8 @@ Matchers for various common kinds of objects.
 import inspect
 import sys
 
-from callee._compat import asyncio, getargspec
-from callee.base import BaseMatcher
+from calleee._compat import asyncio, getargspec
+from calleee.base import BaseMatcher
 
 
 __all__ = ['Bytes', 'Coroutine', 'FileLike']

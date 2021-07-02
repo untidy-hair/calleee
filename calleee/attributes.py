@@ -4,7 +4,7 @@ Attribute-based matchers.
 from itertools import starmap
 from operator import itemgetter
 
-from callee.base import BaseMatcher, Eq
+from calleee.base import BaseMatcher, Eq
 
 
 __all__ = [

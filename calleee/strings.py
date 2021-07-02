@@ -4,9 +4,9 @@ Matchers for strings.
 import fnmatch
 import re
 
-from callee._compat import IS_PY3, casefold
-from callee.base import BaseMatcher
-from callee.objects import Bytes
+from calleee._compat import IS_PY3, casefold
+from calleee.base import BaseMatcher
+from calleee.objects import Bytes
 
 
 __all__ = [

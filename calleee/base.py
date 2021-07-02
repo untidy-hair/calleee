@@ -4,7 +4,7 @@ Base classes for argument matchers.
 import inspect
 from operator import itemgetter
 
-from callee._compat import IS_PY3, metaclass
+from calleee._compat import IS_PY3, metaclass
 
 
 __all__ = [
@@ -200,7 +200,7 @@ class Eq(BaseMatcher):
         mock_foo.assert_called_with(Eq(bar))  # equivalent
 
     In very rare and specialized cases, however, if the **tested code** treats
-    `callee` matcher objects in some special way, using :class:`Eq` may be
+    `calleee` matcher objects in some special way, using :class:`Eq` may be
     necessary.
 
     Those situations shouldn't generally arise outside of writing tests

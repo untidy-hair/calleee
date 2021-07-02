@@ -1,7 +1,7 @@
 """
 Tests for type-related matchers.
 """
-import callee.types as __unit__
+import calleee.types as __unit__
 from tests import MatcherTestCase
 
 

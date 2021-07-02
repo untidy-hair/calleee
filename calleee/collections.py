@@ -12,10 +12,10 @@ except ImportError:
 
 import inspect
 
-from callee._compat import OrderedDict as _OrderedDict
-from callee.base import BaseMatcher
-from callee.general import Any
-from callee.types import InstanceOf
+from calleee._compat import OrderedDict as _OrderedDict
+from calleee.base import BaseMatcher
+from calleee.general import Any
+from calleee.types import InstanceOf
 
 
 __all__ = [
@@ -103,7 +103,7 @@ class Generator(BaseMatcher):
     .. note::
 
         To match a *generator function* itself, you should use the
-        :class:`~callee.functions.GeneratorFunction` matcher instead.
+        :class:`~calleee.functions.GeneratorFunction` matcher instead.
     """
     def match(self, value):
         return inspect.isgenerator(value)

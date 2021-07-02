@@ -5,8 +5,8 @@ from fractions import Fraction
 
 from taipan.testing import skipIf, skipUnless
 
-from callee._compat import IS_PY3
-import callee.numbers as __unit__
+from calleee._compat import IS_PY3
+import calleee.numbers as __unit__
 from tests import MatcherTestCase
 
 

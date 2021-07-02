@@ -3,7 +3,7 @@ Tests for operators' matchers.
 """
 from itertools import chain, combinations
 
-import callee.operators as __unit__
+import calleee.operators as __unit__
 from tests import MatcherTestCase
 
 

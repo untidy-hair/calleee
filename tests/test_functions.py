@@ -5,8 +5,8 @@ import platform
 
 from taipan.testing import skipIf, skipUnless
 
-from callee._compat import IS_PY3, asyncio
-import callee.functions as __unit__
+from calleee._compat import IS_PY3, asyncio
+import calleee.functions as __unit__
 from tests import IS_PY34, IS_PY35, MatcherTestCase, python_code
 
 

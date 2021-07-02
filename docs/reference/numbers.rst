@@ -1,14 +1,14 @@
 Numeric matchers
 ================
 
-.. currentmodule:: callee.numbers
+.. currentmodule:: calleee.numbers
 
 These matchers allow you to assert on specific numeric types, such as :class:`int`\ s or :class:`float`\ s
 They are often combined with :doc:`operator matchers <operators>` to formulate constaints on numeric arguments of mocks:
 
 .. code-block:: python
 
-    from callee import Integer, GreaterThan
+    from calleee import Integer, GreaterThan
     mock_foo.assert_called_with(Integer() & GreaterThan(42))
 
 
