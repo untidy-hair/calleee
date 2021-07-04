@@ -1,3 +1,0 @@
-# Backports for testing on Python 2.6
-
-unittest2
