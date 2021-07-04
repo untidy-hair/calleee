@@ -5,7 +5,7 @@ Using matchers with ``mock``
 (objects, functions, data, etc.) to the code under test. We often configure mocks to expose an interface that the code can rely on. We also expect it to make use of this interface in a well-defined, predictable way.
 
 In Python, the configuration part mostly taken care of by the ``mock`` library. But when it comes to asserting
-that the expected mocks interactions had happened, *callee* can help quite a bit.
+that the expected mocks interactions had happened, *calleee* can help quite a bit.
 
 
 Example
@@ -33,11 +33,11 @@ in the production code.
 Not good! The test shouldn't really care what the exact count is. As long as it's a positive integer,
 maybe except 1 or 2, the test should pass just fine.
 
-Using **argument matchers** provided by *callee*, you can express this intent clearly and concisely:
+Using **argument matchers** provided by *calleee*, you can express this intent clearly and concisely:
 
 .. code-block:: python
 
-    from callee import GreaterThan, Integer
+    from calleee import GreaterThan, Integer
 
     # ...
     mock_fetch_recent_items.assert_called_with(
@@ -49,7 +49,7 @@ Much better! Now you can tweak the layout of the page without further issue.
 Matching basics
 ***************
 
-You can use all *callee* matchers any time you are asserting on calls received by ``Mock``, ``MagicMock``,
+You can use all *calleee* matchers any time you are asserting on calls received by ``Mock``, ``MagicMock``,
 or other ``mock`` objects. They are applicable as arguments to any of the following methods:
 
     * ``assert_called_with``
@@ -91,7 +91,7 @@ Combining matchers
 
 .. _logical-expressions:
 
-Individual matchers, such as :class:`String <callee.strings.String>` or :class:`Float <callee.numbers.Float>`,
+Individual matchers, such as :class:`String <calleee.strings.String>` or :class:`Float <calleee.numbers.Float>`,
 can be combined to build more complex expressions. This is accomplished with Python's "logical" operators:
 ``|``, ``&``, and ``~``.
 
@@ -118,7 +118,7 @@ Next steps
 **********
 
 Now that you know how to use matchers and how to combine them into more complex expressions, you probably want to
-have a look at the wide array of existing matchers offerred by *callee*:
+have a look at the wide array of existing matchers offerred by *calleee*:
 
 .. include:: ../reference/toc.rst.inc
 

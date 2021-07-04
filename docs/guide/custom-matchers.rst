@@ -3,9 +3,9 @@ Creating custom matchers
 
 The wide assortment of predefined matchers should be sufficient for a vast majority of your use cases.
 
-But when they're not, don't worry. *callee* enables you to create your own, custom matchers quickly and succinctly.
+But when they're not, don't worry. *calleee* enables you to create your own, custom matchers quickly and succinctly.
 Those new matchers will be as capable as the standard ones, too, meaning you can use them in
-:ref:`logical expressions <logical-expressions>`, or with collection matchers such as :class:`~callee.collections.List`.
+:ref:`logical expressions <logical-expressions>`, or with collection matchers such as :class:`~calleee.collections.List`.
 
 Here you can learn about all the possible ways of creating matchers with custom logic.
 
@@ -67,7 +67,7 @@ These constraints are outgrown quickly when you use the same ad-hoc matcher more
 Subclassing ``Matcher``
 -----------------------
 
-The canonical way of creating a custom matcher type is to inherit from the :class:`~callee.base.Matcher` base class.
+The canonical way of creating a custom matcher type is to inherit from the :class:`~calleee.base.Matcher` base class.
 
 The only method you need to override there is ``match``. It shall take a single argument -- the ``value`` to test --
 and return a boolean result:
@@ -142,7 +142,7 @@ they were instantiated with.
 .. note::
 
     The convention to surround matcher representations in angle brackets (``<...>``) is followed by
-    all built-in matchers in *callee*, because it makes it easier to tell them apart from literal values.
+    all built-in matchers in *calleee*, because it makes it easier to tell them apart from literal values.
     Adopting it for your own matches is therefore recommended.
 
 
@@ -159,4 +159,4 @@ As a rule of thumb, whenever you define a function solely to use it with :class:
 you should strongly consider creating a :class:`Matcher` subclass instead.
 There is almost no additional boilerplate involved, and the resulting matcher will be more reusable and easier to extend.
 
-Plus, if the new matcher turns up to be useful in multiple tests or projects, it can be added to *callee* itself!
+Plus, if the new matcher turns up to be useful in multiple tests or projects, it can be added to *calleee* itself!

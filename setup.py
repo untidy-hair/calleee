@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 """
-callee
+calleee
 ======
 
 {description}
@@ -71,7 +71,7 @@ def read_requirements(filename='requirements.txt'):
 
 # setup() call
 
-tags = read_tags(os.path.join('callee', '__init__.py'))
+tags = read_tags(os.path.join('calleee', '__init__.py'))
 __doc__ = __doc__.format(**tags)
 
 tests_require = read_requirements('test')
@@ -81,12 +81,12 @@ if sys.version_info < (3, 3):
     tests_require.extend(read_requirements('test-py32'))
 
 setup(
-    name="callee",
+    name="calleee",
     version=tags['version'],
     description=tags['description'],
     long_description=__doc__,
     author=tags['author'],
-    url="https://github.com/Xion/callee",
+    url="https://github.com/untidy-hair/calleee",
     license=tags['license'],
 
     classifiers=[
@@ -95,13 +95,11 @@ setup(
         "License :: OSI Approved :: BSD License",
         "Operating System :: OS Independent",
         "Programming Language :: Python",
-        "Programming Language :: Python :: 2.6",
         "Programming Language :: Python :: 2.7",
-        "Programming Language :: Python :: 3.3",
-        "Programming Language :: Python :: 3.4",
-        "Programming Language :: Python :: 3.5",
         "Programming Language :: Python :: 3.6",
         "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9",
         "Programming Language :: Python :: Implementation :: CPython",
         "Programming Language :: Python :: Implementation :: PyPy",
         "Topic :: Software Development :: Testing",

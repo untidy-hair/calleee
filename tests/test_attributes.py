@@ -1,7 +1,7 @@
 """
 Tests for attribute-based matchers.
 """
-import callee.attributes as __unit__
+import calleee.attributes as __unit__
 from tests import MatcherTestCase
 
 

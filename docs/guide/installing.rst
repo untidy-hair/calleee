@@ -5,7 +5,7 @@ Installing
 
 .. code-block:: shell
 
-    $ pip install callee
+    $ pip install calleee
 
 More detailed instructions and additional notes can be found below.
 
@@ -13,7 +13,7 @@ More detailed instructions and additional notes can be found below.
 Compatibility
 *************
 
-*callee* itself has no external depedencies: it only needs Python. Both Python 2 and Python 3 is supported,
+*calleee* itself has no external depedencies: it only needs Python. Both Python 2 and Python 3 is supported,
 with some caveats:
 
 * if you're using Python 2, you need version 2.6 or 2.7
@@ -27,7 +27,7 @@ The library is tested against both CPython (the standard Python implementation) 
 About the mock library
 **********************
 
-Although it's not a hard dependency, by design *callee* is meant to be used with the ``unittest.mock`` module,
+Although it's not a hard dependency, by design *calleee* is meant to be used with the ``unittest.mock`` module,
 which implements *mock objects* for testing.
 
 In Python 3.3 and later, this module is a part of `the standard library`_, and it's already available on any Python distribution.
@@ -68,15 +68,15 @@ decorator.
 Instructions
 ************
 
-The preferred way to install *callee* is through *pip*:
+The preferred way to install *calleee* is through *pip*:
 
 .. code-block:: shell
 
-    $ pip install callee
+    $ pip install calleee
 
 This will get you the most recent version available on `PyPI`_.
 
-.. _PyPI: https://pypi.python.org/pypi/callee/
+.. _PyPI: https://pypi.python.org/pypi/calleee/
 
 Bleeding edge
 -------------
@@ -90,13 +90,13 @@ and install it in development mode:
 
 .. code-block:: shell
 
-    $ git clone https://github.com/Xion/callee.git
-    Initialized empty Git repository in ~/dev/callee/.git/
-    $ cd callee
+    $ git clone https://github.com/untidy-hair/calleee.git
+    Initialized empty Git repository in ~/dev/calleee/.git/
+    $ cd calleee
     # activate/create your virtualenv if necessary
     $ python setup.py develop
     ...
-    Finished processing dependencies for callee
+    Finished processing dependencies for calleee
 
 The second approach is adequate if you want to use some feature of the library that hasn't made it to a PyPI release yet
 but don't need to make your own modifications. You can tell *pip* to pull the library directly from its Git repository:
@@ -104,4 +104,4 @@ but don't need to make your own modifications. You can tell *pip* to pull the li
 .. code-block:: shell
 
     # activate/create your virtualenv if necessary
-    $ pip install git+https://github.com/Xion/callee.git#egg=callee
+    $ pip install git+https://github.com/untidy-hair/calleee.git#egg=calleee

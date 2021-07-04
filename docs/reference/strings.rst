@@ -1,7 +1,7 @@
 String matchers
 ===============
 
-.. currentmodule:: callee.strings
+.. currentmodule:: calleee.strings
 
 The :class:`String` matcher is the one you'd be using most of the time to match string arguments.
 

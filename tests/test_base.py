@@ -2,7 +2,7 @@
 """
 Tests for matcher base classes.
 """
-import callee.base as __unit__
+import calleee.base as __unit__
 from tests import MatcherTestCase, TestCase
 
 

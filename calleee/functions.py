@@ -3,8 +3,8 @@ Matchers related to functions and other similar callables.
 """
 import inspect
 
-from callee._compat import asyncio
-from callee.base import BaseMatcher
+from calleee._compat import asyncio
+from calleee.base import BaseMatcher
 
 
 __all__ = [
@@ -42,7 +42,7 @@ class GeneratorFunction(FunctionMatcher):
         This is distinct from matching a *generator*,
         i.e. an iterable result of calling the generator function,
         or a generator comprehension (``(... for x in ...)``).
-        The :class:`~callee.collections.Generator` matcher
+        The :class:`~calleee.collections.Generator` matcher
         should be used for those objects instead.
     """
     def match(self, value):

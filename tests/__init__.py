@@ -11,7 +11,7 @@ except ImportError:
 
 from taipan.testing import TestCase as _TestCase
 
-from callee._compat import asyncio
+from calleee._compat import asyncio
 
 
 __all__ = [

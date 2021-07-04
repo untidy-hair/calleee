@@ -4,17 +4,15 @@
 
 language: python
 python:
-  - '2.7'
-  - pypy
-  - '3.4'
-  - '3.5'
-  - '3.6'
-  - '3.7'
-  - pypy3
-
-install: pip install tox-travis
+- '2.7'
+- '3.6'
+- '3.7'
+- '3.8'
+- '3.9'
+- pypy3
+install:
+  - pip install tox-travis
 sudo: false
-
 script: tox
 
 
@@ -24,9 +22,9 @@ script: tox
 
 deploy:
   provider: pypi
-  user: "Xion"
+  user: __token__
   password:
-    secure: E9p9pqSLBQNnxXUVzwqj8FKzBq9+PTIFDUYFBlh9hJ7ccXWUUtP1TNxLe6TBdw11CQjoW1G//7zkWBiTtE7Fq3p2lAA/A+OUUObOYXt15UX77rX/BWZODotQVwUdVHFRSUtCuq78P3Gg1yapy47jkN5c1/gfqq0JSEEbfJnoEquq7XXXN6EFHF7913Y9vB5DZHc3mZR7prsSCDKvKEChFyQEzyS9UyWR9BJ3UBayYt4l4N30pnOfbf21Mgsb3Nuz+dE+UVZGYFIZQ4sMZqwqgfafJ2f5TQoPZHwpyI2okRxk6v8K77MeEUXAU0v5xiCzM111uT/G6vPJaYo9rRewdP13Pk4WPBZFlmCT3xH2NduL3TC0W5P8pVy+An8kY5RRK4lHzuFd+3NR/KCqsmXZKtaKpPialCZl8D9g/XWP3P+vGrEPe+TPKFTeVwGR42Bb+l8A/LarKTXfzXE9t9mc9VIYk9D/J6QjFpBtCnMN1tWcRS131dhMO+PZJ7LHI3EhWn61UkCXzxzbcpB+lYkeCNqUAaSEjokub5o6M+jKaBc2Zbw0znmt8KWBYn4CQw38wWWQ+ZMeiTG1we701qiw2xy//+QZ/Pla4Ilxi89W4HuIFeTmQoJrq7dIIBWj6Y04OYpabOVet2zznq6NgPkamOcVdC9sv8M4BNg+7F+fGWU=
+    secure: XAh3dqw3iy6dDrkBjLAn5b1/yK9EgW3BdHirIxBG8QIvTi39fQMwf6TR4fLJ20SCpd92RnQV9WxfYidkq07Yr9jDvg5efiIl3B0rMTnNzo+3oTv39mOE5DawWnFj/1wd+SM0sYCF3DRYG7Dv1Y6SAGw4Qg0behXVCwS7HPVdRg0E26A09LzusNTWMJtjbaN/D3lHGd5zeyE4cSKBYMXCMfTcfldzv/0nuqT4vbGN4EisC8SeWdDYHORmLAVKDpoEqatDoCXGvJ/1fJV1+adIoOkaJjkqVDGibRZmErZEW03g0JZYRhqSaBqAFGpPQJ9nT4KHAsqhHE2jJPYwi5yJOJ1KxX1pqfu4Ua0kP9urJWK2Q6lCMBfj1xwHWGRYYquE2dldF/60jzFPuv/9CHDjS9Vd07Xr/rKZTL7hK1XYf31fApmIYoI9rJpv4DPZcxK7wwBGI2UGRlehyb2ttEqQZ04DGdRfhE5C4ejwzESeb5F10cER8tl/gELikWcJyS/LrlH20eJIiQELhGumsnJ/YN/d8ztpx73idWMEqKXlFqfOQsIJ6wlwGDskDk0N8dmUR5sBGpMLsipUW/r96GqEDFt6hzctN5yd9almuH0FzLJxgzG394ukByLQiaW5weDt9Clu+7Yapmbvc0Rs4stnE30KNoeRD/YAGHdLoXN1+lU=
   skip_existing: true
   on:
     tags: true
@@ -38,17 +36,13 @@ deploy:
 
 branches:
   only:
-    # Run CI on pushes and PRs to master
-    - master
-    # Also on tags, so that deploys are triggered.
-    # (This regex matches semantic versions like v1.2.3-rc4+2016.02.22)
-    - /^\d+\.\d+(\.\d+)?.*$/
-
+  - master
+  # Also on tags, so that deploys are triggered.
+  # (This regex matches semantic versions like v1.2.3-rc4+2016.02.22)
+  - /^\d+\.\d+(\.\d+)?.*$/
 git:
   # Don't set this to 1
   # (see note at https://docs.travis-ci.com/user/customizing-the-build#Git-Clone-Depth)
   depth: 5
-
 cache:
-  - pip
-
+- pip

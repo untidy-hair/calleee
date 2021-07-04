@@ -6,7 +6,7 @@ from __future__ import absolute_import
 from numbers import Number
 import operator
 
-from callee.base import BaseMatcher, Eq, Is, IsNot
+from calleee.base import BaseMatcher, Eq, Is, IsNot
 
 
 __all__ = [

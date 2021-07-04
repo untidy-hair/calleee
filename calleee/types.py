@@ -3,7 +3,7 @@ Type-related matchers.
 """
 import inspect
 
-from callee.base import BaseMatcher
+from calleee.base import BaseMatcher
 
 
 __all__ = [

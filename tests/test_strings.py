@@ -7,8 +7,8 @@ import re
 
 from taipan.testing import skipIf, skipUnless
 
-from callee._compat import IS_PY3
-import callee.strings as __unit__
+from calleee._compat import IS_PY3
+import calleee.strings as __unit__
 from tests import MatcherTestCase
 
 

@@ -1,7 +1,7 @@
 General matchers
 ================
 
-.. currentmodule:: callee.general
+.. currentmodule:: calleee.general
 
 These matchers are the most general breed that is not specific to any
 particular kind of objects. They allow you to match mock parameters
@@ -20,7 +20,7 @@ Type matchers
 *************
 
 .. TODO: consider extracting these to a separate document to mirror the module structure
-.. currentmodule:: callee.types
+.. currentmodule:: calleee.types
 
 Use these matchers to assert on the type of objects passed to your mocks.
 
@@ -39,7 +39,7 @@ Attribute matchers
 ******************
 
 .. TODO: consider extracting these to a separate document to mirror the module structure
-.. currentmodule:: callee.attributes
+.. currentmodule:: calleee.attributes
 
 These match objects based on their Python attributes.
 
@@ -52,7 +52,7 @@ Function matchers
 *****************
 
 .. TODO: consider extracting these to a separate document to mirror the module structure
-.. currentmodule:: callee.functions
+.. currentmodule:: calleee.functions
 
 .. autoclass:: Callable
 
@@ -67,7 +67,7 @@ Object matchers
 ***************
 
 .. TODO: consider extracting these to a separate document to mirror the module structure
-.. currentmodule:: callee.objects
+.. currentmodule:: calleee.objects
 
 .. autoclass:: Bytes
 

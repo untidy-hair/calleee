@@ -6,8 +6,8 @@ from __future__ import absolute_import
 import fractions
 import numbers
 
-from callee._compat import IS_PY3
-from callee.base import BaseMatcher
+from calleee._compat import IS_PY3
+from calleee.base import BaseMatcher
 
 
 __all__ = [

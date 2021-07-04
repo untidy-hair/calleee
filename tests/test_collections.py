@@ -5,8 +5,8 @@ import collections
 
 from taipan.testing import skipIf
 
-from callee._compat import OrderedDict as _OrderedDict
-import callee.collections as __unit__
+from calleee._compat import OrderedDict as _OrderedDict
+import calleee.collections as __unit__
 from tests import MatcherTestCase
 
 

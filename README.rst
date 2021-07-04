@@ -1,24 +1,24 @@
-callee
+calleee
 ======
 
 Argument matchers for *unittest.mock*
 
 |Version| |Development Status| |Python Versions| |License| |Build Status|
 
-.. |Version| image:: https://img.shields.io/pypi/v/callee.svg?style=flat
-    :target: https://pypi.python.org/pypi/callee
+.. |Version| image:: https://img.shields.io/pypi/v/calleee.svg?style=flat
+    :target: https://pypi.python.org/pypi/calleee
     :alt: Version
-.. |Development Status| image:: https://img.shields.io/pypi/status/callee.svg?style=flat
-    :target: https://pypi.python.org/pypi/callee/
+.. |Development Status| image:: https://img.shields.io/pypi/status/calleee.svg?style=flat
+    :target: https://pypi.python.org/pypi/calleee/
     :alt: Development Status
-.. |Python Versions| image:: https://img.shields.io/pypi/pyversions/callee.svg?style=flat
-    :target: https://pypi.python.org/pypi/callee
+.. |Python Versions| image:: https://img.shields.io/pypi/pyversions/calleee.svg?style=flat
+    :target: https://pypi.python.org/pypi/calleee
     :alt: Python versions
-.. |License| image:: https://img.shields.io/pypi/l/callee.svg?style=flat
-    :target: https://github.com/Xion/callee/blob/master/LICENSE
+.. |License| image:: https://img.shields.io/pypi/l/calleee.svg?style=flat
+    :target: https://github.com/untidy-hair/calleee/blob/master/LICENSE
     :alt: License
-.. |Build Status| image:: https://img.shields.io/travis/Xion/callee.svg?style=flat
-    :target: https://travis-ci.org/Xion/callee
+.. |Build Status| image:: https://img.shields.io/travis/untidy-hair/calleee.svg?style=flat
+    :target: https://travis-ci.org/untidy-hair/calleee
     :alt: Build Status
 
 
@@ -42,7 +42,7 @@ or extremely general::
 
 ----
 
-*callee* provides **argument matchers** that allow you to be exactly as precise as you want::
+*calleee* provides **argument matchers** that allow you to be exactly as precise as you want::
 
     my_mock.assert_called_with(GreaterThan(0), InstanceOf(Foo), String())
 
@@ -61,11 +61,11 @@ It has plenty of matcher types to fit all common and uncommon needs, and you can
 Installation
 ~~~~~~~~~~~~
 
-Installing *callee* is easy with pip::
+Installing *calleee* is easy with pip::
 
-    $ pip install callee
+    $ pip install calleee
 
-| *callee* support goes all the way back to Python 2.6.
+| *calleee* support goes all the way back to Python 2.6.
 | It also works both with the ``unittest.mock`` module from Python 3.3+ or its backport.
 
 
@@ -74,7 +74,7 @@ API reference
 
 See the `documentation`_ for complete reference on the library usage and all available matchers.
 
-.. _documentation: http://callee.readthedocs.org
+.. _documentation: http://calleee.readthedocs.org
 
 
 Contributing

@@ -3,7 +3,7 @@
 Operator matchers
 =================
 
-.. currentmodule:: callee.operators
+.. currentmodule:: calleee.operators
 
 
 Comparisons
@@ -31,7 +31,7 @@ These matchers use Python's relational operators: `<`, `>=`, etc.
 By length
 ---------
 
-In addition to simple comparison matchers described, *callee* offers a set of dedicated matchers for asserting
+In addition to simple comparison matchers described, *calleee* offers a set of dedicated matchers for asserting
 on object's `len`\ gth. You can use them in conjunction with any Python :class:`Sequence`: a :class:`str`\ ing,
 :class:`list`, :class:`collections.deque`, and so on.
 

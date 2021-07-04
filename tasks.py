@@ -35,7 +35,7 @@ def test(ctx, all=False, verbose=False):
 @task
 def lint(ctx):
     """Run the linter."""
-    return ctx.run('flake8 callee tests', pty=True).return_code
+    return ctx.run('flake8 calleee tests', pty=True).return_code
 
 
 @task(help={
@@ -72,8 +72,8 @@ def upload(ctx, yes=False):
     This is done by adding a Git tag for the current non-dev version
     and pushing to GitHub, which triggers the Travis build & deploy pipeline.
     """
-    import callee
-    version = callee.__version__
+    import calleee
+    version = calleee.__version__
 
     # check the packages version
     # TODO: add a 'release' to automatically bless a version as release one

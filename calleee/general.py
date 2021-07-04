@@ -6,8 +6,8 @@ Python objects, like functions or classes.
 """
 import inspect
 
-from callee._compat import IS_PY3, STRING_TYPES
-from callee.base import BaseMatcher
+from calleee._compat import IS_PY3, STRING_TYPES
+from calleee.base import BaseMatcher
 
 
 __all__ = [
