@@ -12,7 +12,6 @@ except ImportError:
 
 import inspect
 
-from calleee._compat import OrderedDict as _OrderedDict
 from calleee.base import BaseMatcher
 from calleee.general import Any
 from calleee.types import InstanceOf
@@ -261,22 +260,5 @@ class Dict(MappingMatcher):
 class OrderedDict(MappingMatcher):
     """Matches an ordered dictionary (:class:`collections.OrderedDict`)
     of given items.
-
-    On Python 2.6, this requires the ordereddict backport package.
-    Otherwise, no object will match this matcher.
     """
-    CLASS = _OrderedDict
-
-    def __init__(self, *args, **kwargs):
-        """For more information about arguments,
-        see the documentation of :class:`Dict`.
-        """
-        # Override the constructor from the base matcher class
-        # without asserting that CLASS is not None, because it legimately will
-        # be on Python 2.6 without the ordereddict package.
-        self._initialize(*args, **kwargs)
-
-    def match(self, value):
-        if self.CLASS is None:
-            return False
-        return super(OrderedDict, self).match(value)
+    CLASS = collections.OrderedDict
