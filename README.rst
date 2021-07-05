@@ -65,8 +65,7 @@ Installing *calleee* is easy with pip::
 
     $ pip install calleee
 
-| *calleee* support goes all the way back to Python 2.6.
-| It also works both with the ``unittest.mock`` module from Python 3.3+ or its backport.
+| *calleee* supports Python 2.7, 3.6+.
 
 
 API reference
