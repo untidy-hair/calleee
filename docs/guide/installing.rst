@@ -1,7 +1,7 @@
 Installing
 ==========
 
-**TL;DR**: On Python 2.6, 2.7, and 3.3+, simply use *pip* (preferably inside virtualenv):
+**TL;DR**: Simply use *pip* (preferably inside virtualenv):
 
 .. code-block:: shell
 
@@ -16,8 +16,8 @@ Compatibility
 *calleee* itself has no external depedencies: it only needs Python. Both Python 2 and Python 3 is supported,
 with some caveats:
 
-* if you're using Python 2, you need version 2.6 or 2.7
-* if you use Python 3, you need at least version 3.3
+* if you're using Python 2, you need version 2.7
+* if you use Python 3, you need at least version 3.6
 
 The library is tested against both CPython (the standard Python implementation) and `PyPy`_.
 
@@ -32,7 +32,7 @@ which implements *mock objects* for testing.
 
 In Python 3.3 and later, this module is a part of `the standard library`_, and it's already available on any Python distribution.
 
-In earlier versions of Python -- including 2.7 and even 2.6 -- you should be using the `backport`_ called ``mock``.
+In earlier versions of Python -- including 2.7 -- you should be using the `backport`_ called ``mock``.
 It has the exact same interface as ``unittest.mock``, and can be used to write forward-compatible test code.
 You can install it from PyPI with *pip*:
 
@@ -40,7 +40,7 @@ You can install it from PyPI with *pip*:
 
     $ pip install mock
 
-If you plan to run your tests against both Python 2.x and 3.x, the recommended way of importing the mock library
+If you plan to run your tests against both Python 2.7 and 3.x, the recommended way of importing the mock library
 is the following:
 
 .. code-block:: python

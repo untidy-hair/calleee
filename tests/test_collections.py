@@ -3,9 +3,6 @@ Tests for collections' matchers.
 """
 import collections
 
-from taipan.testing import skipIf
-
-from calleee._compat import OrderedDict as _OrderedDict
 import calleee.collections as __unit__
 from tests import MatcherTestCase
 
@@ -345,10 +342,8 @@ class OrderedDict(MatcherTestCase):
     test_empty_dict__regular = lambda self: self.assert_no_match({})
     test_empty_dict__custom = lambda self: self.assert_no_match(CustomDict())
 
-    @skipIf(_OrderedDict is None,
-            "requires Python 2.6 or the ordereddict package")
     def test_empty_ordereddict(self):
-        d = _OrderedDict()
+        d = collections.OrderedDict()
         self.assert_match(d)
         self.assert_match(d, str, int)
         self.assert_match(d, keys=str, values=int)
@@ -362,10 +357,8 @@ class OrderedDict(MatcherTestCase):
     test_some_tuple = lambda self: self.assert_no_match(('foo', -1, ['bar']))
     test_some_dict = lambda self: self.assert_no_match({'a': 1})
 
-    @skipIf(_OrderedDict is None,
-            "requires Python 2.6 or the ordereddict package")
     def test_some_ordereddict(self):
-        d = _OrderedDict([('a', 1)])
+        d = collections.OrderedDict([('a', 1)])
         self.assert_match(d)
         self.assert_match(d, str, int)
         self.assert_match(d, keys=str, values=int)
