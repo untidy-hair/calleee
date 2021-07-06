@@ -2,7 +2,7 @@
    sphinx-quickstart on Wed Oct 14 11:24:04 2015.
 
 calleee
-======
+=======
 
 *calleee* provides a wide collection of **argument matchers** to use with the standard ``unittest.mock`` library.
 

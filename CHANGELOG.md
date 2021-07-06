@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.4.0
+
+* The first version as `calleee`
+* Python 3.8 & 3.9 support
+* Drop 2.6, 2.7, pypy2, 3.4, 3.5
+
 ## 0.3.1
 
 * Python 3.6 & 3.7 support

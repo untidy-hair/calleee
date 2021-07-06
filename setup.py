@@ -6,6 +6,7 @@ calleee
 {description}
 """
 import ast
+from io import open
 import os
 from setuptools import find_packages, setup
 import sys
@@ -72,7 +73,6 @@ def read_requirements(filename='requirements.txt'):
 # setup() call
 
 tags = read_tags(os.path.join('calleee', '__init__.py'))
-__doc__ = __doc__.format(**tags)
 
 tests_require = read_requirements('test')
 if sys.version_info < (2, 7):
@@ -80,11 +80,19 @@ if sys.version_info < (2, 7):
 if sys.version_info < (3, 3):
     tests_require.extend(read_requirements('test-py32'))
 
+here = os.path.abspath(os.path.dirname(__file__))
+
+# Get the long description from the README file
+with open(os.path.join(here, 'README.rst'), encoding='utf-8') as f:
+    long_description = f.read()
+
+# TODO: move to setup.cfg
 setup(
     name="calleee",
     version=tags['version'],
     description=tags['description'],
-    long_description=__doc__,
+    long_description=long_description,
+    long_description_content_type="text/x-rst",
     author=tags['author'],
     url="https://github.com/untidy-hair/calleee",
     license=tags['license'],
@@ -95,7 +103,6 @@ setup(
         "License :: OSI Approved :: BSD License",
         "Operating System :: OS Independent",
         "Programming Language :: Python",
-        "Programming Language :: Python :: 2.7",
         "Programming Language :: Python :: 3.6",
         "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.8",

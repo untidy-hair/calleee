@@ -1,5 +1,5 @@
 calleee
-======
+=======
 
 Argument matchers for *unittest.mock*
 
@@ -65,7 +65,7 @@ Installing *calleee* is easy with pip::
 
     $ pip install calleee
 
-| *calleee* supports Python 2.7, 3.6+.
+| *calleee* supports Python 3.6+.
 
 
 API reference
