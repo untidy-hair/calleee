@@ -158,9 +158,8 @@ class Matcher(BaseMatcher):
         # check if the matcher class has a parametrized constructor
         has_argful_ctor = False
         if '__init__' in self.__class__.__dict__:
-            argnames, vargargs, kwargs, _ = inspect.getargspec(
-                self.__class__.__init__)
-            has_argful_ctor = bool(argnames[1:] or vargargs or kwargs)
+            signature = inspect.signature(self.__class__.__init__)
+            has_argful_ctor = len(signature.parameters) > 1
 
         # if so, then it probably means it has some interesting state
         # in its attributes which we can include in the default representation

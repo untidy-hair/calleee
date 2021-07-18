@@ -77,8 +77,7 @@ class Coroutine(MatcherTestCase):
 
     @skipUnless(IS_PY34, "requires Python 3.4+")
     def test_coroutine__decorator(self):
-        @asyncio.coroutine
-        def coro_func(loop):
+        async def coro_func(loop):
             pass
         coro = self.await_(coro_func)
         self.assert_match(coro)
@@ -100,8 +99,7 @@ class Coroutine(MatcherTestCase):
 
     @skipUnless(IS_PY34, "requires Python 3.4+")
     def test_coroutine_function__decorator(self):
-        @asyncio.coroutine
-        def coro_func(loop):
+        async def coro_func(loop):
             pass
         self.assert_no_match(coro_func)
 
@@ -169,13 +167,13 @@ class FileLike(MatcherTestCase):
             __unit__.FileLike(read=None, write=None)
 
     def test_repr(self):
-        self.assertEquals("<FileLike (read)>",
+        self.assertEqual("<FileLike (read)>",
                           repr(__unit__.FileLike(read=True, write=None)))
-        self.assertEquals("<FileLike (read,write)>",
+        self.assertEqual("<FileLike (read,write)>",
                           repr(__unit__.FileLike(read=True, write=True)))
-        self.assertEquals("<FileLike (noread)>",
+        self.assertEqual("<FileLike (noread)>",
                           repr(__unit__.FileLike(read=False, write=None)))
-        self.assertEquals("<FileLike (noread,nowrite)>",
+        self.assertEqual("<FileLike (noread,nowrite)>",
                           repr(__unit__.FileLike(read=False, write=False)))
 
     # Assertion functions

@@ -87,28 +87,28 @@ class Matcher(TestCase):
         """Test default __repr__ of Matcher subclass without a constructor."""
         class Custom(__unit__.Matcher):
             pass
-        self.assertEquals("<Custom>", "%r" % Custom())
+        self.assertEqual("<Custom>", "%r" % Custom())
 
     def test_repr__argless_ctor__no_state(self):
         """Test default __repr__ of Matcher subclass with argless ctor."""
         class Custom(__unit__.Matcher):
             def __init__(self):
                 pass
-        self.assertEquals("<Custom>", "%r" % Custom())
+        self.assertEqual("<Custom>", "%r" % Custom())
 
     def test_repr__argless_ctor__with_state(self):
         """Test __repr__ of Matcher subclass with argless ctor & state."""
         class Custom(__unit__.Matcher):
             def __init__(self):
                 self.foo = 42
-        self.assertEquals("<Custom>", "%r" % Custom())
+        self.assertEqual("<Custom>", "%r" % Custom())
 
     def test_repr__argful_ctor__no_state(self):
         """Test __repr__ with argful constructor but no actual fields."""
         class Custom(__unit__.Matcher):
             def __init__(self, unused):
                 pass
-        self.assertEquals("<Custom(...)>", "%r" % Custom('unused'))
+        self.assertEqual("<Custom(...)>", "%r" % Custom('unused'))
 
     def test_repr__argful_ctor__with_state_from_args(self):
         """Test __repr__ with argful constructor & object fields."""
@@ -117,7 +117,7 @@ class Matcher(TestCase):
                 self.foo = foo
 
         foo = 'bar'
-        self.assertEquals("<Custom(foo=%r)>" % (foo,),
+        self.assertEqual("<Custom(foo=%r)>" % (foo,),
                           "%r" % Custom(foo='bar'))
 
     def test_repr__argful_ctor__with_unrelated_state(self):
@@ -126,7 +126,7 @@ class Matcher(TestCase):
             def __init__(self, foo):
                 self.bar = 42
 
-        self.assertEquals("<Custom(bar=42)>", "%r" % Custom(foo='unused'))
+        self.assertEqual("<Custom(bar=42)>", "%r" % Custom(foo='unused'))
 
 
 class Eq(MatcherTestCase):
@@ -183,7 +183,7 @@ class LogicalCombinators(MatcherTestCase):
         not_no_digits = ~self.NoDigits()  # i.e. HasDigits
         has_digits = self.HasDigits()
         for s in test_strings:
-            self.assertEquals(
+            self.assertEqual(
                 has_digits.match(s), not_no_digits.match(s),
                 msg="expected `%r` and `%r` to match %r equivalently" % (
                     has_digits, not_no_digits, s))
@@ -205,7 +205,7 @@ class LogicalCombinators(MatcherTestCase):
         all_digits_and_all_digits = self.AllDigits() & self.AllDigits()
         all_digits = self.AllDigits()
         for s in test_strings:
-            self.assertEquals(
+            self.assertEqual(
                 all_digits.match(s), all_digits_and_all_digits.match(s),
                 msg="expected `%r` and `%r` to match %r equivalently" % (
                     all_digits, all_digits_and_all_digits, s))
@@ -215,7 +215,7 @@ class LogicalCombinators(MatcherTestCase):
         short_and_digits = self.Short() & self.AllDigits()
         short_digits = self.ShortDigits()
         for s in test_strings:
-            self.assertEquals(
+            self.assertEqual(
                 short_digits.match(s), short_and_digits.match(s),
                 msg="expected `%r` and `%r` to match %r equivalently" % (
                     short_digits, short_and_digits, s))
@@ -237,7 +237,7 @@ class LogicalCombinators(MatcherTestCase):
         short_or_short = self.Short() | self.Short()
         short = self.Short()
         for s in test_strings:
-            self.assertEquals(
+            self.assertEqual(
                 short.match(s), short_or_short.match(s),
                 msg="expected `%r` and `%r` to match %r equivalently" % (
                     short, short_or_short, s))
@@ -247,7 +247,7 @@ class LogicalCombinators(MatcherTestCase):
         has_digits_or_long = self.HasDigits() | self.Long()
         long_or_has_digits = self.LongOrHasDigits()
         for s in test_strings:
-            self.assertEquals(
+            self.assertEqual(
                 long_or_has_digits.match(s), has_digits_or_long.match(s),
                 msg="expected `%r` and `%r` to match %r equivalently" % (
                     long_or_has_digits, has_digits_or_long, s))
@@ -279,7 +279,7 @@ class LogicalCombinators(MatcherTestCase):
         for s in test_strings:
             # Note that the truth of assertion is specific to those predicates:
             # the second one implies the first one.
-            self.assertEquals(
+            self.assertEqual(
                 only_some_digits.match(s), any_xor_all_digits.match(s),
                 msg="expected `%r` and `%r` to match %r equivalently" % (
                     only_some_digits, any_xor_all_digits, s))

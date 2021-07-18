@@ -173,8 +173,7 @@ class CoroutineFunction(MatcherTestCase):
 
     @skipUnless(IS_PY34, "requires Python 3.4+")
     def test_coroutine__decorator(self):
-        @asyncio.coroutine
-        def coro_func(loop):
+        async def coro_func(loop):
             pass
         coro = self.await_(coro_func)
         self.assert_no_match(coro)
@@ -196,8 +195,7 @@ class CoroutineFunction(MatcherTestCase):
 
     @skipUnless(IS_PY34, "requires Python 3.4+")
     def test_coroutine_function__decorator(self):
-        @asyncio.coroutine
-        def coro_func(loop):
+        async def coro_func(loop):
             pass
         self.assert_match(coro_func)
 
