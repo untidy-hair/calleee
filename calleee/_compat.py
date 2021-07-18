@@ -72,6 +72,7 @@ del MetaclassDecorator
 
 def getargspec(obj):
     """Portable version of inspect.getargspec().
+    Since we dropped 2.7, this has to be deprecated.
 
     Necessary because the original is no longer available
     starting from Python 3.6.
@@ -81,10 +82,6 @@ def getargspec(obj):
     Note that distinction between positional-or-keyword and keyword-only
     parameters will be lost, as the original getargspec() doesn't honor it.
     """
-    try:
-        return inspect.getargspec(obj)
-    except AttributeError:
-        pass  # we let a TypeError through
 
     # translate the signature object back into the 4-tuple
     argnames = []

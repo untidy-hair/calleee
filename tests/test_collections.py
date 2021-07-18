@@ -2,6 +2,7 @@
 Tests for collections' matchers.
 """
 import collections
+from collections import abc
 
 import calleee.collections as __unit__
 from tests import MatcherTestCase
@@ -170,12 +171,12 @@ class Set(MatcherTestCase):
 
 # Mappings
 
-class CustomDict(collections.MutableMapping):
+class CustomDict(abc.MutableMapping):
     """"Custom, no-op mapping class that just wraps a regular Python dict
     but is not a Python dict itself.
     """
     def __init__(self, iterable=(), **kwargs):
-        if isinstance(iterable, collections.Mapping):
+        if isinstance(iterable, abc.Mapping):
             iterable = iterable.items()
 
         self.d = {}
